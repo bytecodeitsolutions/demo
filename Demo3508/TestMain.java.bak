@@ -1,0 +1,35 @@
+//Main method
+/*
+    Multiline Comment
+
+     main method:
+	 ============
+    1.  public static==>static public 
+	2.  args---->valid java identifier
+	3.  String[]  args  |  String     []args  | String   args[]
+	4.  []    ===>var arg method
+    5.   
+
+
+*/
+class TestMain
+{
+	 final synchronized strictfp static public void main(String...      a1){
+	   
+	     System.out.println("This is my first program");
+		 System.out.println("This is my first program");
+		 System.out.println("This is my first program");
+		 System.out.println("This is my first program");
+	
+	 }
+
+	 final synchronized strictfp static public void main(int...      a1){
+	   
+	     System.out.println("This is my first program");
+		 System.out.println("This is my first program");
+		 System.out.println("This is my first program");
+		 System.out.println("This is my first program");
+	
+	 }
+	
+}
