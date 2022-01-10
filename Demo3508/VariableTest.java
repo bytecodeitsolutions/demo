@@ -22,5 +22,7 @@ class Test1
 
 		System.out.println("21-->Static variable:: "+Test.a);
 		System.out.println("23-->NonStatic variable:: "+t1.b);
+		System.out.println("21-->Static variable:: "+Test.a);
+		System.out.println("23-->NonStatic variable:: "+t1.b);
 	}
 }
