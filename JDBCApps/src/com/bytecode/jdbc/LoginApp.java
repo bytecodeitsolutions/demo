@@ -11,7 +11,7 @@ public class LoginApp {
 
 	public static void main(String[] args) {
 		Connection con=null; 
-		Statement st=null;
+		Statement st=null;//PreparedStatement
 		String USER_LOGIN=null;
 		String username=null;
 		String password=null;
@@ -37,11 +37,12 @@ public class LoginApp {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			// create the Connection object establish the connection to the database
 
-			 con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "bytecode1", "bytecode1");
+			
+			con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "bytecode1", "bytecode1");
 		    if(con!=null) {
 			 st= con.createStatement();
-		    }
-		    USER_LOGIN="select count(*) from userlist where uname="+username+" and pass="+password;
+		    }//sql injection
+		    USER_LOGIN="select count(*) from userlist where uname="+username+" --and pass="+password;
 		    //send the sql query to database
 		    if(st!=null) {
 		    	rs=st.executeQuery(USER_LOGIN);
