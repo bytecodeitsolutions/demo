@@ -1,0 +1,119 @@
+ There are 3 types of JDBC statements:
+ ---------------------------------------
+
+ java.sql.Statement  (I)
+
+ java.sql.PreparedStatement  extends Statement (I)
+
+ java.sql.CallableStatement  extedns PreparedStatement (I)
+
+ 1. Simple Statement object:-
+------------------------------
+   It is the object of implementation class which implements the Statement
+   (I) and given by third party company or vendor company.
+
+  2. java.sql.PreparedStatement:-
+
+   It is the object of implementation class which implements the
+   PreparedStatement (I) and given by third party company or vendor company.
+
+  3. CallableStatement:
+  ======================
+ It is the object of implementation class which implements the
+   CallableStatement: (I) and given by third party company or vendor company.
+
+   Limitations of simple Statement object:
+   ***************************************
+
+   1. Not suitable for executing same query for multiple times either with 
+   same values or different values.
+     send the sql query        10*100000               1 lakh record store
+     compile the query (parse) 20*100000
+     execute                   10*100000
+     fetch                     5*100000
+
+----------------------------------------------------------------------------
+   2. Framing sql query by involving variables as input values is very 
+   copmlex process.
+
+  String  name="raja";
+   name="'"+"raja"+"'";
+--------------------------------------------------------------------------
+   3. Does not allow parameters (?)/place holder/ place resolver to set
+   values to query later.
+--------------------------------------------------------------------------
+
+   4. may raises sql injection problem.(--)
+----------------------------------------------------------------------------
+   5. Does not allow to insert large objects (files) in database s/w.
+---------------------------------------------------------------------------
+   6. Forces the end user to supply date values in the pattern that is 
+   supported by underlaying database s/w.
+
+   oracle s/w:  DD-MON-YY  "14-JAN-22"
+
+   =========================================================================
+   PreparedStatement:
+   -------------------
+     send the sql query        10*1              1 lakh record store
+     compile the query (parse) 20*1
+     execute                   10*100000
+     fetch                     5*100000
+  
+****************************************************************************
+
+Sample code to work with PreparedStatement:
+*******************************************
+1. Load the driver software
+Class.forName("oracle.jdbc.driver.OracleDriver");
+
+2. Create the Connection object. 
+establish the connection between java application and database s/w.
+  Connection con=DriverManager.getConnection();
+
+3. prepare the sql query with positional parameter/place holder/ place 
+resolver(?).
+
+  studentid=101
+  Studentname=raja
+  studentaddress=kanpur
+
+String query= "insert  into student values(?,?,?)";
+
+4. send the query to the databse s/w and get PreparedStatement object
+which represents the precompiled sql query.
+
+   PreparedStatement ps=con.prepareStatement(query);
+
+ 5. set input values to the ps object(precompiled sql query).
+   ps.setInt(1,101);
+   ps.setString(2,"raja");
+   ps.setString(3,"kanpur");
+
+ 6. execute the precompiled sql to database software.
+    
+    int result=ps.executeUpdate();
+
+ 7. process the result.
+
+    if(result==0){
+       System.out.println("record not inserted");
+    }
+    
+    else{
+         System.out.println("record inserted successfully");
+    }
+
+ 8. close the connection in the reverse order.
+    ps.close();
+    con.close();
+     
+
+  ======================================================================
+  ======================================================================
+
+  Advantage of PreparedStatement object:
+  ---------------------------------------
+
+
+
