@@ -1,0 +1,157 @@
+Why Programming language?
+Software?
+Why Software?
+Types of software?
+  System software
+  Application software
+    standalone Application
+        CUI Application
+        GUI Application
+    Enterprise Application
+        Web Application
+        Distributed Application
+
+Which Programming programing  language we need to learn?
+Why java?
+Why python?
+
+What is Java  and features of java?
+Simple
+secure
+robust
+dynamic
+multi-threaded
+object oriented
+light weight
+open source
+platform independent
+arch neutral
+general purpose
+etc...
+
+Modules of java
+   JSE (java standard edition)[Core Java]  j2se
+      What is JSE?
+      Which type of Application we can develop with the help of JSE.
+   JEE (java Enterprise edition) [Advanced Java] j2ee
+      What is JEE?
+      Which type of Application we can develop with the help of JEE.
+   JME (java micro edition)
+       What is JME?
+       Which type of Application we can develop with the help of JME.
+
+Downloading installing and setting path of jdk software.//
+Difference between jdk,JRE ,JVM and java compiler.
+
+Writing , saving , compiling and executing (running) first  java program.
+-------------------------------------------------------------------------
+JSE: [Core Java]
+a) Language Fundamentals:
+     1.  Identifier
+     2.  Reserved words
+     3.  data Types
+     4.  literals
+     5.  Arrays in Java//limitations
+     6.  variables and its types
+     7.  var-arg  method
+     8.  main method
+     9.  Command line arguments
+     10. java coding standards
+
+ b. Object oriented programing concepts:
+      1.class
+        What is class?
+        Why class?
+        How can we create class?
+      2. object
+         What is object?
+         Why object?
+         How can we create an object?
+      3. Methods / functions/ member functions
+         Types of methods:
+           1. static methods
+           2. non static methods
+
+           1. With parameter
+           2. Without parameter
+
+           1. void return type methods
+           2. non void return type methods
+
+           1. user defined method
+           2. predefined method
+
+        4. data hiding
+        5. abstraction
+        6. Encapsulation
+        7. Tightly encapsulated class
+        8. Inheritance (IS-A  relationship)
+        8. Has-A relationship
+           Composition
+           aggregation
+        9. Method signature
+        10. polymorphism
+            Overloading
+            Overriding
+            Method hiding
+        11. Block
+            static Block
+            non static Block
+        12. Constructor
+        13. Coupling
+        14. Cohesion
+
+  c. Declarations and Access modifiers
+     1.java source file structure
+     2.import statement
+         explicit import
+         implicit import
+        Static import (java1.5)
+          explicit  static import
+          implicit  static import
+      3.package
+
+      4. class modifiers
+            1. public
+            2. <default>
+            3. final
+            4. abstract
+            5. strictfp
+                +
+
+                private
+                protected
+                Static
+      5. Member modifiers
+          public
+          private
+          <default>
+          protected
+
+  d) Exception Handling:
+  ***********************
+     1. Introduction
+     2. What is Exception?
+     3. Why exception handling?
+     4. runtime stack mechanism
+     5. Default Exception handler.
+     6. Customized exception handling by using try catch
+     7. control flow in try catch
+     8. try with multiple catch Block
+     9.
+     10.methods to print exception information
+     11. finally block Block
+     12. difference between final, finally and finalize()
+     13. control flow in try catch and finally
+     14. various possible combinations of try catch finally
+     15. throw keyword in java
+     16. throws keyword in java
+     17. user defined Exception
+     18. 1.7 version enhancements related to Exception handling
+         1. try with resource
+         2. multi-catch Block
+
+  e) Multi-threading
+  f) Collection
+  g)map
+  i) Wrapper classes
