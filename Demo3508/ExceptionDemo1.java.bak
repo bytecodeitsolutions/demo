@@ -1,0 +1,26 @@
+class ExceptionDemo1 extends Throwable
+{
+	ExceptionDemo1(String message){
+		super(message);
+	}
+	public static void main(String[] args) 
+	{
+		try{
+		throw new ExceptionDemo1("Please enter valid pin number");
+		}catch(ExceptionDemo1 obj1){
+		   obj1.printStackTrace();
+		}
+	}
+}
+/*
+1. ExceptionDemo1 cannot be converted to Throwable
+                throw new ExceptionDemo1();
+2.unreported exception ExceptionDemo1; must be caught or declared to be thrown
+                throw new ExceptionDemo1();
+
+3.CheckException==>ExceptionDemo1
+4.Exception in thread "main" ExceptionDemo1
+        at ExceptionDemo1.main(ExceptionDemo1.java:5)
+5. ExceptionDemo1
+        at ExceptionDemo1.main(ExceptionDemo1.java:6)
+*/
