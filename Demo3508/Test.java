@@ -56,6 +56,7 @@ class PrintStream1
 	   System.out.println("This is from Prinstream1 class println1 method");
 	}
 }
+
 class System1
 {
 
