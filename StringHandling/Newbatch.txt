@@ -1,0 +1,354 @@
+Types of software:
+------------------
+Software:-
+   |-System Software:-
+      eg:  OS-  Windows OS, Linux OS , MAC OS...
+           Driver software:
+   |- Application software:-
+         |-Standalone Application
+               |-CUI Application
+                   eg: java programs with main methods
+
+               |-GUI Application
+                   eg: All desktop Application
+         |-Enterprise Application
+               |-Web Application
+
+               |-Distributed Application
+
+
+
+**********************************************************************************************
+===>What is java and its modules?
+---------------------------------
+java is a programming language and a platform.
+
+java is
+Simple
+secure
+robust
+dynamic
+multi-threaded
+object oriented
+light weight
+platform independent
+open resource
+general purpose
+forever green programming language.
+
+Modules of java:
+----------------
+1. JSE/J2SE
+2. JEE/ J2EE
+3. JME/ J2ME
+
+--------------------------------------
+Exception handling keywords summary:
+************************************
+try:- risky code
+finally:-cleanup code
+catch:-handling code
+throw:-
+throws:
+-------------------------------------------
+------------------------------------------
+
+*****
+How to create our exception class:
+----------------------------------
+1. extends Throwable
+2. new InvalidPinException()
+
+class InvalidPinException extends Throwable{
+  public static void main(String[] args){
+
+            throw new InvalidPinException();
+
+  }
+}
+CE: unreposted exception InvalidPinException must be caught or declare to be thrown
+
+ class InvalidPinException extends Throwable{
+   public static void main(String[] args){
+
+          try{
+             throw new InvalidPinException();
+          }catch(InvalidPinException obj1){
+             obj1.printStackTrace();
+          }
+
+
+   }
+}
+CE:  no error
+RE:  Exception in thread main :InvalidPinException --
+   stack trace
+
+class InvalidPinException extends Throwable{
+  public static void main(String[] args)  throws InvalidPinException{
+
+
+            throw new InvalidPinException();
+
+
+
+  }
+}
+
+RE:  Exception in thread main :InvalidPinException --
+   stack trace
+
+***************************************************
+9794 68 72 77:  name email collegename
+
+Why Programming Language
+Why software?
+Types of software:
+  System Software
+  Application Software
+     Standalone Application
+         CUI Application
+         GUI Application
+     Enterprise Application
+        Web Application
+        Distributed Application
+
+What is java ?
+java is a programming language and a platform.
+
+java is
+Simple
+secure
+robust
+dynamic
+multi-threaded
+object oriented
+platform independent
+light weight
+arch neutral
+open source
+forever green
+general purpose
+programming language.
+
+
+Modules of java:
+----------------
+
+|-JSE / j2se
+
+ What is J2SE
+ Why JSE?
+ Which type Application we can develop by using JSE.
+|-JEE/ j2ee:
+
+What is JEE.
+Why JEE?
+Which type Application we can develop by using JEE.
+
+|-JME / J2ME
+
+What is JME
+Why JME?
+Which type Application we can develop by using JME?
+
+**********************************************************************************
+JSE / J2SE :
+java standard edition
+java 2 platform standard edition:
+----------------------------------
+it is the  minimum module that we should arrange in our system to work on java.
+it is the base module for other modules.
+it is the installable module and we can install JSE in the form of JDK.[java development kit]
+we can develop Standalone Application with the help of JSE module.
+   CUI Application
+   GUI Application
+
+To develop these types of Application we need to learn :
+ Language Fundamentals:
+ Object oriented programing
+ Declarations and Access modifiers
+ Interface and abstract classes
+ String handling
+ Exception handling
+ multi-threading
+ Collection
+ map................
+
+ ================================================================================
+JEE / J2EE:
+  java Enterprise edition/
+  java 2 platform Enterprise edition:
+  ------------------------------------------
+  it is not an installable module means we can not install JEE module.
+  it is the software specifications or some rules and guide lines given by sunms / oracle
+  to the third party companies to develop server software (web server software or application server ) and being a programmer we are responsible to download and install the server software and work on that software , working on that server software is nothing but working on JEE module.
+
+  by using JEE module we can develop Enterprise application:
+      Web Application(website)
+      Distributed Application
+
+To develop these application we need to learn
+
+Technologies:
+-------------
+JDBC
+Servlet
+JSP
+
+Technologies provides abstraction layer on programing language.
+
+abstraction:
+hide the internal implementations and just high light the set of services is called
+abstraction.
+
+Frameworks:
+
+Spring [Core , AOP , JDBC , MVC , Boot, Security]
+Hibernate
+
+Webservices:
+ Restful
+ Soap
+ AWS
+
+______________________________________________________________________________
+JSE  ===>(Core java)====>JDK
+J2EE/ JEE ===>Advanced java  (JDBC  servlet  JSP)==>database connectivity====>30 Application
+60 application servlet JSP ===>server side application (websites)
+mini projectes
+realtime tools -->git
+
+JME:[J2ME]
+----------
+java micro edition
+java 2 platform micro edition
+
+(java mobile edition)
+-----------------------------------
+It is an installable module.
+we can install JME in the form mdk. [modile development kit]
+
+We can develop embedded system application by using J2ME.
+embedded system application= software + hardware
+**********************************************************
+
+any application Which is developed on regular system/ machine.
+code ---->chip---->hardware machine:
+-------------------------------------
+
+robot=---->
+automated washing machine--->
+vechicles--->
+******************************************************************************
+
+Downloading , installing and setting path of jdk:
+=================================================
+J2SE: JSE ==>jdk :
+
+download the jdk software:
+-------------------------
+
+Google :  open jdk to download :-->
+-----------------------------------
+.exe===>install
+.zip==>extract
+
+1. download the jdk
+2. install the jdk:
+-------------------
+right click ---->run as admin---->yes ---->
+C:\ program files \java \ jdk \bin
+3. setting path of jdk:
+right click to Thic PC ===>properties====>advanced system setting===>environment variable====>
+====  >new  (system variable)====>
+variable name===>  path
+variable value==>C:\Program Files\Java\jdk1.8.0_31\bin
+
+ok
+ok
+ok.
+open cmd-->javac
+javap
+javadoc
+
+
+This PC \ C:\ program files \ java \ jdk \ bin
+
+
+Difference between jdk , JRE , java compiler and JVM:
+====================================================
+Architecture of JVM:--
+=========================================================
+Writing , saving , compiling and executing a java program:
+----------------------------------------------------------
+Writing:
+--------
+Editor software:
+Notepad / notepad++ / editplus / atom  etc..
+
+IDE: integrated development environment
+ Eclipse , Netbeans ,Intellij ....
+
+download and install editor software:
+=====================================
+Editplus:
+---------
+type the program:
+save the program:
+
+
+
+syntax:
+
+ClassName.java===>FirstProgram.java
+--------------
+FileName.java
+
+Compile the java program:
+--------------------------
+open cmd
+---------
+go to search box :
+type cmd
+go to that folder where saved the .java file (source file)
+
+C:\user\hp F:
+F:\cd foldername
+F:\cd demogitrepo\ cd demo3605\
+
+To compile the java:
+
+javac FileName.java
+javac FirstProgram.java    FirstProgram.class
+
+java ClassName
+java FirstProgram:
+
+---------------------------------------------------------------
+
+syntax for  class:
+-------------------
+Why class?
+How ?
+What is class?
+
+Identifier:
+-----------
+Any name in java program is called Identifier.
+it can be classname, methodname, variablename , interface name...etc.
+
+girl:--cat
+boy:--->dog
+
+Rules to define java Identifier:
+-------------------------------
+
+Reserved words / keywords
+data Types
+literals
+variable
+main methods
+command line arguments
+java coding standards
+Arrays

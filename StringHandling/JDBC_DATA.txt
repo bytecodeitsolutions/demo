@@ -1,0 +1,43 @@
+
+
+Working with date values:
+-------------------------
+
+In real-time application development inserting, retrieving date values are quite common operations.
+While working with  DOB(date of birth), DOJ(Date of journey), DOM(date of marriage)  etc...
+
+Don't store date values  as string values in database s/w table columns because performing arithmetic operations on string date values is quite complex so always prefer  to store date values in the form date data type.
+
+almost all database software give support to date datatype.
+
+===>if we use Simple statement object programmer should gather date values from end user in the form that pattern is supported by underlaying database s/w.
+
+oracle database s/w:  DD-MON-YY
+mysql:-               yyyy-mm-dd (java.sql.Date)
+
+we can solve above problems by PreparedStatement object that means we can insert date value in database table in the pattern that is supported by underlaying database software irrespective of of the pattern of date value given by end user.
+
+if we take date values other than java.sql.Date pattern then we have to convert that string date into java.util.Date then java.sql.Date.
+
+
+once java.sql.Date class object is given to JDBC driver ,it will insert date value in the database table column in the pattern that is supported by underlaying database software.
+
+java.util.Date can not used for database operations, java.sql.Date is used for database operations and it is subclass of java.util.Date.
+
+
+Converting String date values to java.sql.Date:
+   |-1. Converting String date into java.util.Date::
+   **************************************************
+   String stringdate="25-01-2022";  String Date
+
+   SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd/mm/yyyy");
+
+   java.util.Date  utildate=simpleDateFormat.parse(stringdate);
+---------------------------------------------------------------------------------
+
+   |-2. Converting java.util.Date into java.sql.Date
+
+       long ms=utildate.getTime();
+      java.sql.Date  sqldate=new java.sql.Date(ms);
+
+      ps.setDate(1,sqldate);

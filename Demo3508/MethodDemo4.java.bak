@@ -9,12 +9,13 @@ class MethodDemo4
 		 System.out.println("second way way:: "+MethodDemo4.a);
 		 obj1=new MethodDemo4();
 		 System.out.println("third way way:: "+obj1.a);
-		 Test5  t1=new Test5();
-		 t1.m1();
+		 Test5.t1=new Test5();
+		 Test5.t1.m1();
 	}
 }
 class Test5
 {
+	static Test5 t1=null;
 	void m1(){
 		
 		 System.out.println("second way way:: "+MethodDemo4.a);

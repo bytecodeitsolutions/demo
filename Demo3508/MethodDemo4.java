@@ -1,6 +1,6 @@
 class MethodDemo4 
 {
-	static int  a=10;
+	 static int  a=10;
 	 static MethodDemo4  obj1=null;
 	public static void main(String[] args) 
 	{
