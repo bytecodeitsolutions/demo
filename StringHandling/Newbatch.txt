@@ -344,7 +344,8 @@ boy:--->dog
 Rules to define java Identifier:
 -------------------------------
 
-Reserved words / keywords
+Reserved words / keywords:
+===========================
 data Types
 literals
 variable
@@ -352,3 +353,166 @@ main methods
 command line arguments
 java coding standards
 Arrays
+
+
+================================================================
+Identifier:
+----------
+Any name in java program is called Identifier.
+It can be classname, methodname , variablename or lable name  , interface name ...etc.
+
+1. we can use a to z , A to Z , 0 to 9 , _  underscore and dollar $.
+eg:
+   class  Test1_${
+
+
+   }
+
+   int   number1_$=10;
+
+2. we can not start with digits.
+
+   class T1est{
+
+      int  a1=100;
+   }
+
+3. java Identifiers are case sensitive.
+   int  a=10;
+   int  A=100;
+
+   int number=1000;
+   int Number=2000;
+
+4.  we can take any length for java Identifier.
+    int rollNumber=101;
+    Sop();
+
+5. we can not use Reserved words / keywords as a java Identifier.
+
+   if , else, for , do , while ====>
+
+6. we can use all predefined classes and interfaces as a Identifier but its not a good programming practice.
+
+   int  Number=10;
+   int Runnable=20;
+   int String=100;
+
+
+   Reserved words / keywords:
+   ===========================
+   apple
+   mango
+   guava
+   orange
+   grapes
+
+   ==========>fruits
+
+
+   lotus
+   lily
+   sun flower
+   rose
+=============>flowers
+
+
+   run
+   sleep
+   study
+   eat
+   drink
+   walk
+   --------------------->functionality
+
+
+   [53  words---->special meaning or functionality]
+   **************************************************
+                        Reserved words [53]
+        keywords  [50]                               Reserved literals[3]
+                                                            true
+  used keywords 48        unused keywords 2                 false
+                                                            null
+                          |-  goto
+                          |-  const
+  
+  "keywords for datatypes:"
+  -----------------------
+  byte
+  short
+  int
+  long
+  float
+  double
+  boolean
+  char
+
+  "keywords for exception handling"
+  ----------------------------------
+  try
+  catch
+  finally
+  throws
+  throw
+  assert
+  --------------------------------------
+
+  keywords for classes:
+     class
+     interface
+     extends
+     implements
+     import
+     package
+
+--------------------------------------
+
+ keywords for access modifiers:
+  public
+  private
+  protected
+  native
+  synchronized
+  strictfp
+  volatile
+  static
+  final
+  abstract
+  transient
+
+ object related keyword:
+
+ new
+ this
+ super
+ instanceof
+
+ =================================
+
+ 1. lower case
+ 2. implements implement
+    extends    extend
+    import     imports
+    synchronized synchronize
+    package    packages
+
+3. strictfp , enum , assert
+
+=======================================================================================
+
+Data types:
+-----------
+"keywords for datatypes:"
+-----------------------
+
+
+byte
+short
+int
+long
+float
+double
+boolean
+char
+
+------------------------------------
