@@ -1,17 +1,20 @@
-class Test 
+class Test
 {
-	static Test obj1=null;
+	private int  a;
 
-	public static void main(String[] args) 
-	{
-		obj1=new Test();
-		  obj1.m1();
+	void m1(int  x){
+	   this.a=x;
 	}
 
+	int  m2(){
+	 return a;
+	}
 
-	void m1(){
+	public static void main(String[] args){
+	    Test  obj1=new Test();
+		obj1.m1(10);
+		int  b=obj1.m2();
 
-	    System.out.println("This is from m1() method");
-	
-	 }
+		System.out.println(b);
+	}
 }

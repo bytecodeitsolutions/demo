@@ -3,6 +3,7 @@ package com.bytecode.jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -37,17 +38,17 @@ public class DateInsertionApp {
 			System.out.println("Enter customer address");
 			address = scanner.next();
 
-			System.out.println("Enter date of purchase dd-mon-yy");
+			System.out.println("Enter date of purchase dd-MM-yyyy");
 			sdop = scanner.next();
 
-			System.out.println("Enter date of return mm-dd-yy");
+			System.out.println("Enter date of return MM-dd-yy");
 			sdor = scanner.next();
 
-			System.out.println("Enter date of marriage yyyy-mm-dd");
+			System.out.println("Enter date of marriage yyyy-MM-dd");
 			sdom = scanner.next();
 			// converting string date of purchase sdop to java.util.Date
 
-			simpleDateFormat = new SimpleDateFormat("DD-MM-YY");
+			simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
 			udop = simpleDateFormat.parse(sdop);
 
 			// converting java.util.Date udop to java.sql.Date sqldop
@@ -58,7 +59,7 @@ public class DateInsertionApp {
 
 			// converting string date of return sdor to java.util.Date
 
-			simpleDateFormat2 = new SimpleDateFormat("MM-DD-YY");
+			simpleDateFormat2 = new SimpleDateFormat("MM-dd-yy");
 			udor = simpleDateFormat2.parse(sdor);
 
 			// converting java.util.Date udop to java.sql.Date sqldop
@@ -75,7 +76,7 @@ public class DateInsertionApp {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			// step-2
 			// create the Connection object
-
+             
 			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "bytecode1", "bytecode1");
 			INSERT_DATE_QUERY = "insert into customer values(?,?,?,?,?,?)";
 			// step-3 : create the PreparedStatement object
@@ -87,6 +88,7 @@ public class DateInsertionApp {
 				ps.setDate(4, sqldop);
 				ps.setDate(5, sqldor);
 				ps.setDate(6, sqldom);
+				
 				result = ps.executeUpdate();
 			}
 			if (result == 0) {
